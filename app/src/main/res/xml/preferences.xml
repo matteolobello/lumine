@@ -1,0 +1,51 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/customization">
+
+        <com.kizitonwose.colorpreference.ColorPreference
+            android:defaultValue="@color/colorAccent"
+            android:key="accent_color"
+            android:summary="@string/accent_color_summary"
+            android:title="@string/accent_color"
+            app:colorChoices="@array/color_accents"
+            app:colorShape="circle"
+            app:numColumns="5"
+            app:showDialog="true"
+            app:viewSize="large" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/about">
+
+        <Preference
+            android:key="rate_us"
+            android:summary="@string/rate_us_summary"
+            android:title="@string/rate_us">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=it.matteolobello.lumine" />
+        </Preference>
+
+        <Preference
+            android:key="feedback"
+            android:title="@string/feedback">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="mailto:contact@matteolobello.it">
+                <extra
+                    android:name="android.intent.extra.SUBJECT"
+                    android:value="Lumine Feedback" />
+                <extra
+                    android:name="android.intent.extra.TEXT"
+                    android:value="@string/feedback_email_body_placeholder" />
+            </intent>
+        </Preference>
+
+        <Preference
+            android:key="version"
+            android:title="@string/version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentDefault</item>
+
+        <item name="android:fontFamily">@font/hanken_grotesk_bold</item>
+        <item name="fontFamily">@font/hanken_grotesk_bold</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:letterSpacing">0.005</item>
+
+        <item name="android:colorControlHighlight">@color/colorAccentDefault</item>
+    </style>
+
+    <style name="AppTheme.RedAccent" parent="AppTheme">
+        <item name="colorAccent">@color/colorAccentRed</item>
+        <item name="android:colorControlHighlight">@color/colorAccentRed</item>
+    </style>
+
+    <style name="AppTheme.BlueAccent" parent="AppTheme">
+        <item name="colorAccent">@color/colorAccentBlue</item>
+        <item name="android:colorControlHighlight">@color/colorAccentBlue</item>
+    </style>
+
+    <style name="AppTheme.PeachAccent" parent="AppTheme">
+        <item name="colorAccent">@color/colorAccentPeach</item>
+        <item name="android:colorControlHighlight">@color/colorAccentPeach</item>
+    </style>
+
+    <style name="AppTheme.PurpleAccent" parent="AppTheme">
+        <item name="colorAccent">@color/colorAccentPurple</item>
+        <item name="android:colorControlHighlight">@color/colorAccentPurple</item>
+    </style>
+
+    <style name="AppTheme.BrownAccent" parent="AppTheme">
+        <item name="colorAccent">@color/colorAccentBrown</item>
+        <item name="android:colorControlHighlight">@color/colorAccentBrown</item>
+    </style>
+
+    <style name="AppTheme.YellowAccent" parent="AppTheme">
+        <item name="colorAccent">@color/colorAccentYellow</item>
+        <item name="android:colorControlHighlight">@color/colorAccentYellow</item>
+    </style>
+
+    <style name="LaunchScreenTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <item name="android:statusBarColor">@color/colorAccentDefault</item>
+        <item name="android:navigationBarColor">@color/colorAccentDefault</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/expandedFabBackgroundScrim</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+
+        <item name="colorControlHighlight">@color/colorAccentDefault</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

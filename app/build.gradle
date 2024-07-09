@@ -1,0 +1,94 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "it.matteolobello.lumine"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 7
+        versionName "1.1.4"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file("../keystore/release.keystore")
+            storePassword "__REDACTED__"
+            keyAlias "__REDACTED__"
+            keyPassword "__REDACTED__"
+        }
+        debug {
+            storeFile file("../keystore/debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    buildToolsVersion "28.0.3"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // UI
+    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "com.google.android.material:material:1.0.0"
+    implementation "com.firebaseui:firebase-ui-auth:4.1.0"
+    implementation "com.google.code.gson:gson:2.8.4"
+    implementation "com.jaredrummler:colorpicker:1.0.2"
+    implementation "com.rm:freedrawview:1.1.2"
+    implementation "com.sothree.slidinguppanel:library:3.4.0"
+    implementation "com.github.chrisbanes:PhotoView:2.1.4"
+    implementation "com.github.kizitonwose.colorpreference:core:1.0.6"
+    implementation "com.github.imtuann:FloatingActionButtonExpandable:1.0.3"
+    implementation "com.tbuonomo.andrui:viewpagerdotsindicator:2.1.2"
+    implementation project(":morphtransitions")
+    implementation project(":bottomsheetitemslayout")
+    implementation project(":imagepicker")
+    implementation project(":circleimageview")
+
+    // Firebase
+    implementation "com.google.firebase:firebase-auth:16.1.0"
+    implementation "com.google.firebase:firebase-database:16.0.5"
+
+    // Play Services
+    implementation "com.google.android.gms:play-services-vision:17.0.2"
+    implementation "com.google.android.gms:play-services-auth:16.0.1"
+
+    // Images
+    implementation "com.squareup.picasso:picasso:2.71828"
+    implementation "com.github.bumptech.glide:glide:4.7.1"
+    implementation "id.zelory:compressor:2.1.0"
+
+    // Piracy Checker
+    implementation "com.github.javiersantos:PiracyChecker:1.2.4"
+}
+
+androidExtensions {
+    experimental = true
+}
+
+apply plugin: "com.google.gms.google-services"

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="it.matteolobello.lumine">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+
+    <application
+        android:name=".LumineApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".ui.activity.LaunchScreenActivity"
+            android:theme="@style/LaunchScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.OnboardingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.activity.LoginActivity" />
+
+        <activity android:name=".ui.activity.HomeActivity" />
+
+        <activity
+            android:name=".ui.activity.ExpandedFabActivity"
+            android:parentActivityName=".ui.activity.HomeActivity"
+            android:theme="@style/Theme.Transparent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.HomeActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.NoteActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".ui.activity.TaskActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".ui.activity.TaskCategorySelectionActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.activity.ReminderActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity android:name=".ui.activity.DrawingActivity" />
+
+        <activity android:name=".ui.activity.FullscreenImagesActivity" />
+
+        <activity android:name=".ui.activity.SettingsActivity" />
+
+        <activity android:name=".ui.activity.CrashActivity" />
+
+        <activity android:name=".ui.activity.ShareActionInterceptorActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".data.service.UploadNotesService" />
+        <service android:name=".data.service.DownloadNotesService" />
+
+        <receiver android:name=".data.receiver.ReminderReceiver" />
+
+        <receiver android:name=".data.receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

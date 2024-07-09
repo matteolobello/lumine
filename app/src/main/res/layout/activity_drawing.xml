@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawingSlidingUpPanelLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    app:umanoFadeColor="@android:color/transparent"
+    app:umanoOverlay="true"
+    app:umanoPanelHeight="68dp"
+    app:umanoShadowHeight="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/drawingUpperToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/defaultNewNoteBackgroundColor"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/drawingBackArrowImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/twotone_arrow_back_24px"
+                app:tint="@color/menuItemColor" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/drawingRedoImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/twotone_redo_24px"
+                app:tint="@color/menuItemColor" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/drawingUndoImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/drawingRedoImageView"
+                app:srcCompat="@drawable/twotone_undo_24px"
+                app:tint="@color/menuItemColor" />
+
+        </RelativeLayout>
+
+        <com.rm.freedrawview.FreeDrawView
+            android:id="@+id/drawView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/drawingUpperToolbar"
+            android:background="@color/defaultNewNoteBackgroundColor" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/drawingFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="84dp"
+            android:src="@drawable/twotone_done_24px"
+            android:tint="?colorAccent"
+            app:backgroundTint="@android:color/white" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_sheet_background">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drawingExpandIndicator"
+                android:layout_width="35dp"
+                android:layout_height="4dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                app:cardBackgroundColor="@color/scrollIndicatorColor"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/drawingColorsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drawingExpandIndicator"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/drawingStrokeWidthsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drawingColorsRecyclerView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="8dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drawingStrokeWidthsRecyclerView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="43dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <it.matteolobello.circleimageview.CircleImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toStartOf="@id/drawingStrokeAlphaSeekBar"
+                    app:civ_border_color="@color/alphaSeekBarIndicator"
+                    app:civ_border_width="2dp"
+                    app:srcCompat="@android:color/white" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/drawingStrokeAlphaSeekBar"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:maxHeight="4dp"
+                    android:minHeight="4dp"
+                    android:progressDrawable="@drawable/alpha_seekbar_progress"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/alpha_seekbar_thumb" />
+
+                <it.matteolobello.circleimageview.CircleImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/drawingStrokeAlphaSeekBar"
+                    app:civ_border_color="@color/alphaSeekBarIndicator"
+                    app:civ_border_width="2dp"
+                    app:srcCompat="@color/alphaSeekBarIndicator" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

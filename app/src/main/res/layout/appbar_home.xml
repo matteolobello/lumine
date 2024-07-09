@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:elevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <it.matteolobello.circleimageview.CircleImageView
+            android:id="@+id/profilePicImageView"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="17dp"
+            app:civ_border_color="@color/profilePicBorderColor"
+            app:civ_border_overlay="true"
+            app:civ_border_width="1dp"
+            app:srcCompat="?colorAccent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appBarTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="17dp"
+            android:gravity="center"
+            android:text="@string/notes"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/hanken_grotesk_bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appBarMoreImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="7dp"
+                app:srcCompat="@drawable/ic_more_vert" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.appbar.AppBarLayout>

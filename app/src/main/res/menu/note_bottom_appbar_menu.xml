@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_note_color"
+        android:icon="@drawable/twotone_palette_24px"
+        android:title="@string/change_note_color"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_add_images"
+        android:icon="@drawable/twotone_add_a_photo_24px"
+        android:title="@string/add_images"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_ocr"
+        android:icon="@drawable/twotone_scan_24px"
+        android:title="@string/scan"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_drawing"
+        android:icon="@drawable/twotone_add_drawing_24px"
+        android:title="@string/add_drawing"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_move_to_trash"
+        android:icon="@drawable/twotone_delete_24px"
+        android:title="@string/move_to_trash"
+        app:showAsAction="always" />
+</menu>

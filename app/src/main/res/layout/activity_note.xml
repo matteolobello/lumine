@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newNoteRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultNewNoteBackgroundColor"
+    android:orientation="vertical"
+    tools:background="@color/blue">
+
+    <ScrollView
+        android:id="@+id/newNoteContentWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:transitionName="@string/morph_transition">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backArrowImageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    app:srcCompat="@drawable/twotone_arrow_back_24px" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/newNoteMoreImageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    app:srcCompat="@drawable/ic_more_vert" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/newNoteTextWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/noteTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="@string/title"
+                    android:inputType="text"
+                    android:maxLines="2"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/newNoteTitleHintColor"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/noteLastEditTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/hanken_grotesk"
+                    tools:text="Last edited: 09:32" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imagesListWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_marginTop="36dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="9dp"
+                    app:cardElevation="0dp"
+                    tools:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/imagesRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/deleteImageWrapper"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="16dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#BB333333"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:tint="@android:color/white"
+                            app:srcCompat="@drawable/twotone_delete_24px" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <it.matteolobello.lumine.ui.view.indicator.ScrollIndicatorView
+                        android:id="@+id/imagesListIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="2dp"
+                        android:background="@android:color/transparent"
+                        android:elevation="8dp"
+                        android:gravity="center" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/scrim"
+                        android:elevation="4dp"
+                        android:rotation="180" />
+
+                </androidx.cardview.widget.CardView>
+
+                <it.matteolobello.lumine.ui.view.EditTextWithBullets
+                    android:id="@+id/noteBodyEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginBottom="@dimen/bottomAppBarWithFabHeight"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="@string/write_something"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/newNoteBodyHintColor"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/hanken_grotesk" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="end"
+        app:fabCradleMargin="8dp"
+        app:menu="@menu/note_bottom_appbar_menu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bottomAppBarFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/twotone_done_24px"
+        android:tint="?colorAccent"
+        app:backgroundTint="@android:color/white"
+        app:layout_anchor="@id/bottomAppBar"
+        app:rippleColor="?colorAccent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

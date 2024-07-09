@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/statusBarElevationView"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:alpha="0"
+        android:background="@drawable/status_bar_shadow"
+        android:elevation="999dp" />
+
+    <include layout="@layout/appbar_home" />
+
+    <it.matteolobello.lumine.ui.view.MaterialViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/twotone_pencil_24px"
+        android:tint="?colorAccent"
+        app:backgroundTint="@android:color/white"
+        app:rippleColor="?colorAccent"
+        tools:layout_marginBottom="76dp"
+        tools:layout_marginEnd="16dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/home_bottom_navigation_menu" />
+
+    <View
+        android:id="@+id/backgroundDimView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:translationZ="100dp" />
+
+    <RelativeLayout
+        android:id="@+id/menuBottomSheetContainer"
+        android:layout_width="match_parent"
+        android:layout_height="326dp"
+        android:background="@drawable/bottom_sheet_background"
+        android:elevation="999dp"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <it.matteolobello.bottomsheetitemslayout.BottomSheetListLayout
+            android:id="@+id/bottomSheetListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

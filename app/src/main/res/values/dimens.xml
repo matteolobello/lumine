@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottomNavigationBarHeight">56dp</dimen>
+    <dimen name="colorItemSize">26dp</dimen>
+    <dimen name="bottomAppBarWithFabHeight">112dp</dimen>
+    <dimen name="itemCollaboratorSize">30dp</dimen>
+</resources>

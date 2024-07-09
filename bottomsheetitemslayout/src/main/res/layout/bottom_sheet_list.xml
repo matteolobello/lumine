@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="22dp">
+
+    <it.matteolobello.circleimageview.CircleImageView
+        android:id="@+id/bottomSheetProfilePicImageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        app:civ_border_overlay="true"
+        app:civ_border_width="1dp"
+        app:srcCompat="?colorAccent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bottomSheetNameSurnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/bottomSheetProfilePicImageView"
+        android:text="@string/app_name"
+        android:textColor="?colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bottomSheetEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottomSheetNameSurnameTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/bottomSheetProfilePicImageView"
+        android:textColor="@color/menuItemColor"
+        android:textSize="14sp"
+        app:fontFamily="@font/roboto_regular"
+        tools:text="This is an awesome BottomSheet" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bottomSheetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottomSheetEmailTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/bottomSheetProfilePicImageView"
+        android:background="?colorAccent"
+        android:textSize="14sp"
+        tools:text="Log out" />
+
+    <View
+        android:id="@+id/bottomSheetItemsRootViewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/bottomSheetButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:alpha="0.12"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/bottomSheetItemsRootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottomSheetItemsRootViewDivider"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical" />
+
+</RelativeLayout>

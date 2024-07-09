@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccentDefault">#1F7264</color>
+
+    <!-- Needed by FirebaseUI -->
+    <color name="colorAccent">@color/colorAccentDefault</color>
+
+    <color name="almostWhiteColorAccent">#DFECEA</color>
+    <color name="lightColorAccent">#C4DCD9</color>
+
+    <color name="systemBarsWhitePreM">#D3D3D3</color>
+    <color name="unselectedBottomNavigationMenuItem">#757575</color>
+
+    <color name="backgroundDim">#64FFB797</color>
+    <color name="maxBottomSheetDimColor">@color/backgroundDim</color>
+    <color name="expandedFabBackgroundScrim">@color/backgroundDim</color>
+    <color name="backgroundDimNoTransparency">#F5D9CD</color>
+
+    <color name="taskNotMarkedAsDoneBgColor">#F2F2F2</color>
+
+    <color name="red">#E66665</color>
+    <color name="yellow">#F0D167</color>
+    <color name="cyan">#9BD8DB</color>
+    <color name="purple">#9295CA</color>
+    <color name="green">#00A086</color>
+    <color name="blue">#4D6A92</color>
+    <color name="pink">#FFC5AE</color>
+    <color name="brown">#C08769</color>
+    <color name="white">#ECEFF1</color>
+
+    <integer-array name="noteColors">
+        <item>@color/red</item>
+        <item>@color/yellow</item>
+        <item>@color/cyan</item>
+        <item>@color/purple</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/pink</item>
+        <item>@color/brown</item>
+        <item>@color/white</item>
+    </integer-array>
+
+    <color name="drawingColor1">#000000</color>
+    <color name="drawingColor2">#ff5252</color>
+    <color name="drawingColor3">#ffc107</color>
+    <color name="drawingColor4">#00bf5b</color>
+    <color name="drawingColor5">#2196f3</color>
+    <color name="drawingColor6">#7e57c2</color>
+    <color name="drawingColor7">#8d6e63</color>
+    <color name="drawingColor8">#90a4ae</color>
+    <color name="drawingColor9">#ffffff</color>
+    <color name="drawingColor10">#25af94</color>
+    <color name="drawingColor11">#ff8f43</color>
+    <color name="drawingColor12">#4dd0e1</color>
+    <color name="drawingColor13">#a0e276</color>
+    <color name="drawingColor14">#1867c6</color>
+    <color name="drawingColor15">#f48eab</color>
+    <color name="drawingColor16">#0b7047</color>
+    <color name="drawingColor17">#8e0202</color>
+    <color name="drawingColor18">#c4a54e</color>
+
+    <integer-array name="drawingColors">
+        <item>@color/drawingColor1</item>
+        <item>@color/drawingColor2</item>
+        <item>@color/drawingColor3</item>
+        <item>@color/drawingColor4</item>
+        <item>@color/drawingColor5</item>
+        <item>@color/drawingColor6</item>
+        <item>@color/drawingColor7</item>
+        <item>@color/drawingColor8</item>
+        <item>@color/drawingColor9</item>
+        <item>@color/drawingColor10</item>
+        <item>@color/drawingColor11</item>
+        <item>@color/drawingColor12</item>
+        <item>@color/drawingColor13</item>
+        <item>@color/drawingColor14</item>
+        <item>@color/drawingColor15</item>
+        <item>@color/drawingColor16</item>
+        <item>@color/drawingColor17</item>
+        <item>@color/drawingColor18</item>
+    </integer-array>
+
+    <color name="newNoteColor">@color/colorAccentDefault</color>
+    <color name="newListColor">@color/colorAccentRed</color>
+    <color name="newDrawingColor">@color/colorAccentBlue</color>
+    <color name="addImageColor">@color/colorAccentYellow</color>
+
+    <color name="loginBackgroundColor">@color/colorAccentDefault</color>
+    <color name="defaultNewNoteBackgroundColor">#EFEFF0</color>
+    <color name="menuItemColor">#757575</color>
+
+    <color name="newNoteBodyHintColorLightBackground">#000000</color>
+    <color name="newNoteBodyHintColor">#FFFFFF</color>
+    <color name="newNoteTitleHintColorLightBackground">#000000</color>
+    <color name="newNoteTitleHintColor">#FFFFFF</color>
+
+    <color name="newNoteBodyColorLightBackground">#000000</color>
+    <color name="newNoteBodyColor">#FFFFFF</color>
+    <color name="newNoteLastEditColorLightBackground">#000000</color>
+    <color name="newNoteLastEditColor">#FFFFFF</color>
+    <color name="newNoteTitleColorLightBackground">#000000</color>
+    <color name="newNoteTitleColor">#FFFFFF</color>
+
+    <color name="backArrowLightBackground">#000000</color>
+    <color name="backArrowColor">#FFFFFF</color>
+
+    <color name="scrollIndicatorColor">#A0A0A0</color>
+
+    <color name="alphaSeekBarIndicator">#90a4ad</color>
+
+    <color name="profilePicBorderColor">#E5E5E5</color>
+
+    <color name="indicatorBackground">#64000000</color>
+    <color name="taskNotMarkedAsDoneBorderColor">#757575</color>
+</resources>

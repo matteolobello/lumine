@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/expandedFabContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="16dp"
+    android:transitionName="@string/morph_transition"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="12dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/newNoteButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingStart="20dp"
+            android:paddingEnd="28dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/newNoteButtonImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/twotone_pencil_24px"
+                app:tint="@color/colorAccentDefault" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="24dp"
+                android:text="@string/new_note"
+                android:textColor="@color/newNoteColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newListButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingStart="20dp"
+            android:paddingEnd="28dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/twotone_format_list_bulleted_24px"
+                app:tint="@color/newListColor" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="24dp"
+                android:text="@string/new_list"
+                android:textColor="@color/newListColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newDrawingButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingStart="20dp"
+            android:paddingEnd="28dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/twotone_add_drawing_24px"
+                app:tint="@color/newDrawingColor" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="24dp"
+                android:text="@string/new_drawing"
+                android:textColor="@color/newDrawingColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingStart="20dp"
+            android:paddingEnd="28dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/twotone_image_24px"
+                app:tint="@color/addImageColor" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="24dp"
+                android:text="@string/add_image"
+                android:textColor="@color/addImageColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_margin="7dp">
+
+    <it.matteolobello.circleimageview.CircleImageView
+        android:layout_width="@dimen/colorItemSize"
+        android:layout_height="@dimen/colorItemSize"
+        android:layout_centerInParent="true"
+        android:src="@android:color/black" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<it.matteolobello.circleimageview.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/colorItemSize"
+    android:layout_height="@dimen/colorItemSize"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:src="@color/blue" />

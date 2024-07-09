@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="color_accents">
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccentRed</item>
+        <item>@color/colorAccentBlue</item>
+        <item>@color/colorAccentPeach</item>
+        <item>@color/colorAccentPurple</item>
+        <item>@color/colorAccentBrown</item>
+        <item>@color/colorAccentYellow</item>
+    </integer-array>
+
+    <color name="colorAccentRed">#ED4343</color>
+    <color name="colorAccentBlue">#29589B</color>
+    <color name="colorAccentPeach">#F97E5D</color>
+    <color name="colorAccentPurple">#7179BF</color>
+    <color name="colorAccentBrown">#B26847</color>
+    <color name="colorAccentYellow">#D89B12</color>
+</resources>

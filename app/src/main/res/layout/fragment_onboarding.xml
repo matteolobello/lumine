@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/onboardingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
+        android:textColor="?colorAccent"
+        app:backgroundTint="@android:color/white"
+        app:cornerRadius="4dp"
+        app:rippleColor="?colorAccent"
+        tools:text="Get Started" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/onboardingDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/onboardingButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="56dp"
+        android:textSize="16sp"
+        app:fontFamily="@font/hanken_grotesk"
+        tools:text="Onboarding description" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/onboardingTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/onboardingDescriptionTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="3"
+        android:textColor="?colorAccent"
+        android:textSize="32sp"
+        app:fontFamily="@font/hanken_grotesk_bold"
+        tools:text="Onboarding description" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/onboardingImageView"
+        android:layout_width="278dp"
+        android:layout_height="278dp"
+        android:layout_above="@+id/onboardingTitleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="114dp"
+        tools:srcCompat="@drawable/onboarding_1" />
+
+</RelativeLayout>

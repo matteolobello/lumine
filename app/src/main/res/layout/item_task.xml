@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/taskNotMarkedAsDoneBgColor"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <it.matteolobello.lumine.ui.view.CheckBox
+            android:id="@+id/taskItemCheckBox"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="21dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/taskItemTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="7dp"
+            android:layout_toEndOf="@id/taskItemCheckBox"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLines="2"
+            tools:text="Clean the garage" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

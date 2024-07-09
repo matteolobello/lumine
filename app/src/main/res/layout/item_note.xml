@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="7dp"
+    android:layout_marginEnd="7dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/noteCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="14dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="?colorAccent"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:id="@+id/noteItemContentWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="19dp"
+            android:transitionName="@string/morph_transition">
+
+            <FrameLayout
+                android:id="@+id/noteImagesListWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="160dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/noteImagesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/multipleImagesIndicatorCardView"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="12dp"
+                    app:cardBackgroundColor="@color/indicatorBackground"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/multipleImagesIndicatorImageView"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:tint="@android:color/white"
+                        app:srcCompat="@drawable/twotone_burst_mode_24px" />
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <it.matteolobello.lumine.ui.view.ScrollingMarqueeTextView
+                android:id="@+id/noteTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noteImagesListWrapper"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="Title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noteBodyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noteTitleTextView"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:maxLines="5"
+                tools:text="This is the body of the note and it is a very long text look it never ends wow so cool ok stop now" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noteBodyTextView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="16dp"
+                tools:text="Category" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
